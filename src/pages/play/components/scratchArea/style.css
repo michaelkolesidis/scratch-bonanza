@@ -1,0 +1,25 @@
+.scratcharea-container {
+  margin: 0.4em;
+}
+
+.scratcharea {
+  display: flex;
+  width: 170px;
+  height: 170px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid #f6be66;
+  background-color: #121212;
+  border-radius: 20px;
+  padding: 0.5em;
+}
+
+.revealed-icon {
+  height: 90px;
+  margin: 7.5px;
+}
+
+.revealed-amount {
+  height: 30px;
+}

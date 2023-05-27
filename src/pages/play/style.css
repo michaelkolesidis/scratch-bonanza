@@ -1,0 +1,38 @@
+.play-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.loading {
+  color: #fff;
+  animation: flash 0.5s infinite;
+  font-size: 40px;
+  text-align: center;
+}
+
+@keyframes flash {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+
+  90% {
+    display: block;
+    opacity: 0.99;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+

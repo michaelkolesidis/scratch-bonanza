@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 13 27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<polygon id="a" points="0 0.66 9.18 0.66 9.18 23.28 3.3 23.28 3.3 5.64 0 5.64"/>
+</defs>
+<g transform="translate(1.923,1.72)" fill="none">
+<use fill="#f6b042" stroke="#ffffff" stroke-width="2" xlink:href="#a"/>
+<path d="m9.68 0.16v23.62h-6.88v-17.64h-3.3v-5.98z" stroke="#866024" stroke-opacity=".502"/>
+</g>
+</svg>
