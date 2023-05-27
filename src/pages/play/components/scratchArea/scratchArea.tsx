@@ -10,11 +10,18 @@ interface IScratchAreaProps {
 }
 
 const ScratchArea = ({ value }: IScratchAreaProps) => {
-  const [amount, setAmount] = useState(value);
-  const [amountSrc, setAmountSrc] = useState(`./assets/${amount}.svg`);
-  const [iconSrc, setIconSrc] = useState(
-    amount === 0 ? "./assets/banana.svg" : "./assets/coin.svg"
-  );
+  const [
+    amount,
+    // setAmount
+  ] = useState(value);
+  const [
+    amountSrc,
+    // setAmountSrc
+  ] = useState(`./assets/${amount}.svg`);
+  const [
+    iconSrc,
+    // setIconSrc
+  ] = useState(amount === 0 ? "./assets/banana.svg" : "./assets/coin.svg");
 
   const [isClicked, setIsClicked] = useState(false);
   const [isScratching, setIsScratching] = useState(false);
