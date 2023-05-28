@@ -1,4 +1,4 @@
-# Scratch Bonanza
+![Scratch Bonanza Logo](./public/assets/logo.png)
 
 An online scratchcard game. Do you feel lucky?
 

@@ -11,9 +11,9 @@ export const Play = () => {
 
   useEffect(() => {
     const currentUrl = window.location.href;
-    const isLocal = /(localhost|192)/.test(currentUrl);
+    const isLocal = /(localhost)/.test(currentUrl);
     let valuesUrl: string;
-    
+
     if (isLocal) {
       valuesUrl = "http://localhost:4000/values";
     } else {
@@ -29,7 +29,6 @@ export const Play = () => {
         const response = await fetch(valuesUrl, requestOptions);
         if (response.ok) {
           const data = await response.json();
-          console.log("Response data:", data);
           setScratchCard(data);
         } else {
           console.error("Failed to fetch scratch card:", response.status);
