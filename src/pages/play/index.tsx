@@ -31,13 +31,12 @@ export const Play = () => {
           const data = await response.json();
           setScratchCard(data);
         } else {
-          console.error("Failed to fetch scratch card:", response.status);
+          console.error("Failed to fetch scratch card: ", response.status);
         }
       } catch (error) {
-        console.error("Error while fetching scratch card:", error);
+        console.error("Error while fetching scratch card: ", error);
       }
     };
-
     fetchScratchCard();
   }, []);
 

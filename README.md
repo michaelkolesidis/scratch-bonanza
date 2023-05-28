@@ -4,7 +4,8 @@ An online scratchcard game. Do you feel lucky?
 
 ## Instructions
 
-In order to run the project locally you need to start both the client (this repository) and the server, that can be found in its own repository: [Scratch Bonanza Server](https://github.com/michaelkolesidis/scratch-bonanza-server)
+In order to run the project locally you need to start both the client (this repository) and the server, that can be found in its own repository, [Scratch Bonanza Server](https://github.com/michaelkolesidis/scratch-bonanza-server)
+
 Install the project dependencies:
 
 ```
@@ -21,23 +22,26 @@ yarn dev
 
 There is also an online deployment of _Scratch Bonanza_ that can be found in [here](https://scratch-bonanza.vercel.app/). The online version is deployed in [Vercel](https://vercel.com/) and is configured to use an online deployment of the server, deployed in [Render](https://render.com/).
 
+When using the online version, you should note that loading the first scratchcard will usually take around 12-15 seconds, as the project is hosted using the free tier of Render, thus the server sleeps when inactive.
+
 ## Features
 
 Each scratchcard features four scratchable areas that have a reward hidden underneath. The rewards are the following:
-1🪙, 10🪙, 100🪙, 1000🪙 or 0🍌.
+
+**1**🪙, **10**🪙, **100**🪙, **1000**🪙 or **0**🍌
 
 ## Technologies
 
 The core technologies of _Scratch Bonanza_ are JavaScript, CSS and the Canvas API. The following libraries and tools are used:
 
-| Name              | License | Description                                                     |
-| ----------------- | :-----: | --------------------------------------------------------------- |
-| TypeScript        |   MIT   | A strongly typed programming language that builds on JavaScript |
-| React             |   MIT   | Component-based, front-end interface library                    |
-| React Router      |   MIT   | Declarative routing for React web applications                  |
-| React Scratchcard |   MIT   | A scratchcard component for React                               |
-| Zustand           |   MIT   | State management                                                |
-| Vite              |   MIT   | Frontend development tooling                                    |
+| Name              | License | Description                                         |
+| ----------------- | :-----: | --------------------------------------------------- |
+| TypeScript        |   MIT   | A strongly typed language that builds on JavaScript |
+| React             |   MIT   | Component-based, front-end interface library        |
+| React Router      |   MIT   | Declarative routing for React web applications      |
+| React Scratchcard |   MIT   | A scratchcard component for React                   |
+| Zustand           |   MIT   | State management                                    |
+| Vite              |   MIT   | Frontend development tooling                        |
 
 ## Screenshots
 
@@ -45,7 +49,7 @@ The core technologies of _Scratch Bonanza_ are JavaScript, CSS and the Canvas AP
 
 ## Software Used
 
-A non-exhaustive list of all the software that was used during the development of Scratch Bonanza.
+A non-exhaustive list of all the software that was used during the development of _Scratch Bonanza_.
 
 - Visual Studio Code
 - Inkscape
