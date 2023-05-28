@@ -1,5 +1,5 @@
 import "./style.css";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ScratchCard from "react-scratchcard-v2";
 
 const scratchingSound = new Audio("./sounds/scratching.mp3");
@@ -10,64 +10,47 @@ interface IScratchAreaProps {
 }
 
 const ScratchArea = ({ value }: IScratchAreaProps) => {
-  const [
-    amount,
-    // setAmount
-  ] = useState(value);
-  const [
-    amountSrc,
-    // setAmountSrc
-  ] = useState(`./assets/${amount}.svg`);
-  const [
-    iconSrc,
-    // setIconSrc
-  ] = useState(amount === 0 ? "./assets/banana.svg" : "./assets/coin.svg");
-
-  const [isClicked, setIsClicked] = useState(false);
+  const [amount, setAmount] = useState(value);
+  const [amountSrc, setAmountSrc] = useState(`./assets/${amount}.svg`);
+  const [iconSrc, setIconSrc] = useState(
+    amount === 0 ? "./assets/banana.svg" : "./assets/coin.svg"
+  );
+  const [isTouched, setIsTouched] = useState(false);
   const [isScratching, setIsScratching] = useState(false);
 
+  /*
+   * Mouse functionality
+   */
   const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.button === 0) {
-      setIsClicked(true);
+      setIsTouched(true);
       setIsScratching(true);
     }
   };
 
   const handleMouseUp = () => {
-    setIsClicked(false);
+    setIsTouched(false);
     setIsScratching(false);
   };
 
   const handleMouseEnter = () => {
-    if (isClicked) {
+    if (isTouched) {
       setIsScratching(true);
     }
   };
 
   const handleMouseLeave = () => {
-    if (isClicked) {
+    if (isTouched) {
       setIsScratching(false);
     }
   };
 
+  // Used to pause the sound when the pointer
+  // temporarily leaves the area while scratching
   useEffect(() => {
     const handleWindowMouseUp = () => {
-      if (isClicked) {
-        setIsClicked(false);
-        setIsScratching(false);
-      }
-    };
-    window.addEventListener("mouseup", handleWindowMouseUp);
-
-    return () => {
-      window.removeEventListener("mouseup", handleWindowMouseUp);
-    };
-  }, [isClicked]);
-
-  useEffect(() => {
-    const handleWindowMouseUp = () => {
-      if (isClicked) {
-        setIsClicked(false);
+      if (isTouched) {
+        setIsTouched(false);
         setIsScratching(false);
       }
     };
@@ -77,7 +60,35 @@ const ScratchArea = ({ value }: IScratchAreaProps) => {
     return () => {
       window.removeEventListener("mouseup", handleWindowMouseUp);
     };
-  }, [isClicked]);
+  }, [isTouched]);
+
+  /*
+   * Touch functionality
+   */
+  const handleTouchStart = () => {
+    setIsTouched(true);
+    setIsScratching(true);
+  };
+
+  const handleTouchEnd = () => {
+    setIsTouched(false);
+    setIsScratching(false);
+  };
+
+  useEffect(() => {
+    const handleWindowTouchEnd = () => {
+      if (isTouched) {
+        setIsTouched(false);
+        setIsScratching(false);
+      }
+    };
+
+    window.addEventListener("touchend", handleWindowTouchEnd);
+
+    return () => {
+      window.removeEventListener("touchend", handleWindowTouchEnd);
+    };
+  }, [isTouched]);
 
   useEffect(() => {
     if (isScratching) {
@@ -89,14 +100,21 @@ const ScratchArea = ({ value }: IScratchAreaProps) => {
     }
   }, [isScratching]);
 
+  const supportsTouchEvents = "ontouchstart" in window;
+  const eventHandlers = supportsTouchEvents
+    ? {
+        onTouchStart: handleTouchStart,
+        onTouchEnd: handleTouchEnd,
+      }
+    : {
+        onMouseEnter: handleMouseEnter,
+        onMouseLeave: handleMouseLeave,
+        onMouseDown: handleMouseDown,
+        onMouseUp: handleMouseUp,
+      };
+
   return (
-    <div
-      className="scratcharea-container"
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="scratcharea-container" {...eventHandlers}>
       <ScratchCard
         width={170}
         height={170}

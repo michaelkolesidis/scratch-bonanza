@@ -22,13 +22,13 @@ yarn dev
 
 There is also an online deployment of _Scratch Bonanza_ that can be found in [here](https://scratch-bonanza.vercel.app/). The online version is deployed in [Vercel](https://vercel.com/) and is configured to use an online deployment of the server, deployed in [Render](https://render.com/).
 
-When using the online version, you should note that loading the first scratchcard will usually take around 12-15 seconds, as the project is hosted using the free tier of Render, thus the server sleeps when inactive.
+When using the online version, you should note that loading the first scratchcard will usually take around 15-20 seconds, as the project is hosted using the free tier of Render, thus the server sleeps when inactive.
 
 ## Features
 
-Each scratchcard features four scratchable areas that have a reward hidden underneath. The rewards are the following:
-
-**1**🪙, **10**🪙, **100**🪙, **1000**🪙 or **0**🍌
+- Each scratchcard features four scratchable areas that have a reward hidden underneath
+- Five different reward options: **1**🪙, **10**🪙, **100**🪙, **1000**🪙 or **0**🍌
+- Scratching sound while scratching implemented both on touch and on non-touch devices
 
 ## Technologies
 
