@@ -1,8 +1,11 @@
 import "./style.css";
 import { useNavigate } from "react-router-dom";
+import useGame from "../../stores/useGame";
+import { Modal } from "../../components/modal/Modal";
 
 export const Home = () => {
   const navigate = useNavigate();
+  const { modal, setModal } = useGame();
 
   return (
     <div className="home-page">
@@ -10,10 +13,8 @@ export const Home = () => {
       <div onClick={() => navigate("/play")} className="button-main">
         PLAY
       </div>
-      <div
-        onClick={() => console.log("Help modal opened!")}
-        className="help-button"
-      />
+      <div onClick={() => setModal(true)} className="help-button" />
+      {modal && <Modal />}
     </div>
   );
 };

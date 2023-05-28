@@ -29,6 +29,7 @@ When using the online version, you should note that loading the first scratchcar
 - Each scratchcard features four scratchable areas that have a reward hidden underneath
 - Five different reward options: **1**🪙, **10**🪙, **100**🪙, **1000**🪙 or **0**🍌
 - Scratching sound while scratching implemented both on touch and on non-touch devices
+- Help modal available in all screens
 
 ## Technologies
 

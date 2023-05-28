@@ -1,5 +1,5 @@
 import "./style.css";
-import ScratchArea from "../scratchArea/scratchArea";
+import ScratchArea from "../scratchArea/ScratchArea";
 
 interface IScratchCardProps {
   card: (0 | 10 | 100 | 1000)[];

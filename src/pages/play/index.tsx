@@ -1,10 +1,13 @@
 import "./style.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ScratchCard from "./components/scratchCard/scratchCard";
+import useGame from "../../stores/useGame";
+import ScratchCard from "./components/scratchCard/ScratchCard";
+import { Modal } from "../../components/modal/Modal";
 
 export const Play = () => {
   const navigate = useNavigate();
+  const { modal, setModal } = useGame();
   const [scratchCard, setScratchCard] = useState<
     (0 | 10 | 100 | 1000)[] | undefined
   >();
@@ -50,6 +53,8 @@ export const Play = () => {
           <div onClick={() => navigate("/")} className="button-main">
             BACK
           </div>
+          <div onClick={() => setModal(true)} className="help-button" />
+          {modal && <Modal />}
         </>
       )}
     </div>

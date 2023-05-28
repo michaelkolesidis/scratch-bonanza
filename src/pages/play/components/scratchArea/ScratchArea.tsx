@@ -133,10 +133,6 @@ const ScratchArea = ({ value }: IScratchAreaProps) => {
           />
         </div>
       </ScratchCard>
-      <div
-        onClick={() => console.log("Help modal opened!")}
-        className="help-button"
-      />
     </div>
   );
 };
