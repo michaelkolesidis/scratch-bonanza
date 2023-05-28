@@ -9,27 +9,39 @@ export const Play = () => {
     (0 | 10 | 100 | 1000)[] | undefined
   >();
 
-  const fetchScratchCard = async (): Promise<void> => {
-    try {
-      const url = `http://localhost:4000/values`;
-      const requestOptions = {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-      };
-      const response = await fetch(url, requestOptions);
-      if (response.ok) {
-        const data = await response.json();
-        console.log("Response data:", data);
-        setScratchCard(data);
-      } else {
-        console.error("Failed to fetch scratch card:", response.status);
-      }
-    } catch (error) {
-      console.error("Error while fetching scratch card:", error);
-    }
-  };
-
   useEffect(() => {
+    const currentUrl = window.location.href;
+    console.log("Current URL:", currentUrl);
+
+    const isLocal = /(localhost|192)/.test(currentUrl);
+
+    let valuesUrl: string;
+
+    if (isLocal) {
+      valuesUrl = "http://localhost:4000/values";
+    } else {
+      valuesUrl = "https://scratch-bonanza.onrender.com/values";
+    }
+
+    const fetchScratchCard = async () => {
+      try {
+        const requestOptions = {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        };
+        const response = await fetch(valuesUrl, requestOptions);
+        if (response.ok) {
+          const data = await response.json();
+          console.log("Response data:", data);
+          setScratchCard(data);
+        } else {
+          console.error("Failed to fetch scratch card:", response.status);
+        }
+      } catch (error) {
+        console.error("Error while fetching scratch card:", error);
+      }
+    };
+
     fetchScratchCard();
   }, []);
 
