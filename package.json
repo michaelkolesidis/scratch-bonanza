@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "author": "Michael Kolesidis",
   "description": "An online scratchcard game. Do you feel lucky?",
+  "keywords": ["react", "animation", "gambling", "scratch", "lottery", "lottery-game", "react-game", "online-game", "scratchcard", "scratcher", "gambling-game", "scratch-off", "scratchie", "lottery-ticket", "scratch-game", "scratch-ticket", "scratch-and-win", "scratchcard-game", "scratch-it", "instant-lottery"],
   "license": "UNLICENSED",
   "private": true,
   "type": "module",
