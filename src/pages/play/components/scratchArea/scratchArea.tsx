@@ -118,7 +118,7 @@ const ScratchArea = ({ value }: IScratchAreaProps) => {
       <ScratchCard
         width={170}
         height={170}
-        image="./assets/scratch_card.svg"
+        image="./assets/scratch_card.png"
         finishPercent={60}
         onComplete={() => console.log("complete")}
         brushSize={15}
