@@ -8,7 +8,7 @@
 .home-page-logo {
   height: 65vh;
   width: min(500px, 100vw);
-  background-image: url("./assets/logo.png");
+  background-image: url("/assets/logo.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -36,4 +36,3 @@
     transform: scale(1, 1) rotateZ(0deg);
   }
 }
-

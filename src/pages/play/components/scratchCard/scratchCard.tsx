@@ -6,8 +6,6 @@ interface IScratchCardProps {
 }
 
 const Card = ({ card }: IScratchCardProps) => {
-  console.log(card);
-
   return (
     <div className="card">
       <ScratchArea value={card[0]} />

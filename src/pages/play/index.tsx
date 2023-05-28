@@ -11,12 +11,9 @@ export const Play = () => {
 
   useEffect(() => {
     const currentUrl = window.location.href;
-    console.log("Current URL:", currentUrl);
-
     const isLocal = /(localhost|192)/.test(currentUrl);
-
     let valuesUrl: string;
-
+    
     if (isLocal) {
       valuesUrl = "http://localhost:4000/values";
     } else {
