@@ -36,3 +36,7 @@
   grid-template-columns: 1fr 1fr;
 }
 
+.disabled-button {
+  pointer-events: none;
+  opacity: 0.5;
+}

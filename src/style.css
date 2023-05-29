@@ -37,7 +37,7 @@ body,
 }
 
 .button-main {
-  width: min(200px, 40vw);
+  width: min(220px, 45vw);
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.13)),
     radial-gradient(
       90% 7% at 50% 8%,
@@ -53,7 +53,7 @@ body,
     0 0.2em 0.2em rgba(255, 255, 255, 0.27) inset,
     0.2em 0 0.2em rgba(255, 255, 255, 0.27) inset, 0 -0.2em 0.2em #d3a928 inset;
   cursor: pointer;
-  margin: 1.5em auto;
+  margin: 1em auto 0 auto;
   padding: 0.5em 1em;
   font-size: min(7vw, 40px);
   font-weight: 600;

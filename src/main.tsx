@@ -1,8 +1,8 @@
 import "./style.css";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./pages/home";
-import { Play } from "./pages/play";
+import { Home } from "./pages/home/Home";
+import { Play } from "./pages/play/Play";
 
 // Prevent right click
 document.addEventListener("contextmenu", (e) => e.preventDefault());

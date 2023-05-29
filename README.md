@@ -35,14 +35,16 @@ When using the online version, you should note that loading the first scratchcar
 
 The core technologies of _Scratch Bonanza_ are JavaScript, CSS and the Canvas API. The following libraries and tools are used:
 
-| Name              | License | Description                                         |
-| ----------------- | :-----: | --------------------------------------------------- |
-| TypeScript        |   MIT   | A strongly typed language that builds on JavaScript |
-| React             |   MIT   | Component-based, front-end interface library        |
-| React Router      |   MIT   | Declarative routing for React web applications      |
-| React Scratchcard |   MIT   | A scratchcard component for React                   |
-| Zustand           |   MIT   | State management                                    |
-| Vite              |   MIT   | Frontend development tooling                        |
+| Name                  | License | Description                                         |
+| --------------------- | :-----: | --------------------------------------------------- |
+| TypeScript            |   MIT   | A strongly typed language that builds on JavaScript |
+| React                 |   MIT   | Component-based, front-end interface library        |
+| React Router          |   MIT   | Declarative routing for React web applications      |
+| React Scratchcard     |   MIT   | A scratchcard component for React                   |
+| Zustand               |   MIT   | State management                                    |
+| Vite                  |   MIT   | Frontend development tooling                        |
+| Jest                  |   MIT   | JavaScript testing framework                        |
+| React Testing Library |   MIT   | Testing utilitie                                    |
 
 ## Screenshots
 
