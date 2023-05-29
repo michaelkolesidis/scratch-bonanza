@@ -4,6 +4,7 @@ import useGame from "../../../../stores/useGame";
 import ScratchCard from "react-scratchcard-v2";
 
 const scratchingSound = new Audio("./sounds/scratching.mp3");
+scratchingSound.volume = 0.3;
 scratchingSound.loop = true;
 
 const coinSound = new Audio("./sounds/coin.mp3");
@@ -108,7 +109,6 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
     useEffect(() => {
       if (isScratching) {
         scratchingSound.currentTime = 0;
-        scratchingSound.volume = 0.3;
         scratchingSound.play();
       } else {
         scratchingSound.pause();

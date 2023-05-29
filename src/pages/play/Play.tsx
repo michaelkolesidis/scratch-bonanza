@@ -5,6 +5,9 @@ import useGame from "../../stores/useGame";
 import Card from "./components/scratchCard/ScratchCard";
 import { Modal } from "../../components/modal/Modal";
 
+const magicSound = new Audio("./sounds/magic.mp3");
+magicSound.volume = 0.3;
+
 type CardRefType = {
   resetScratchCards: () => void;
 };
@@ -48,6 +51,8 @@ export const Play = () => {
   };
 
   const handleNew = async () => {
+    magicSound.currentTime = 0;
+    magicSound.play();
     resetRevealed();
     resetAllScratchCards();
     fetchScratchCard();
