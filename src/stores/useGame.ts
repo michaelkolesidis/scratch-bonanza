@@ -51,7 +51,7 @@ const store = create<State>()(
       });
     },
     /**
-     *  Total Areas Scratched
+     *  Total Cards
      */
     /**
      *  Credits
