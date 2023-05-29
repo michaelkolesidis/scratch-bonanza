@@ -29,22 +29,35 @@ When using the online version, you should note that loading the first scratchcar
 - Each scratchcard features four scratchable areas that have a reward hidden underneath
 - Five different reward options: **1**🪙, **10**🪙, **100**🪙, **1000**🪙 or **0**🍌
 - Scratching sound while scratching implemented both on touch and on non-touch devices
+- Three different success sounds when revealing an award (a sound for 1 coin, another sound for 10 coins, and another sound for 100 and 1000 coins)
+- New game and restart functionality
+- New button is active only when all four areas have been scratched
 - Help modal available in all screens
+- Responsive for mobile (iPhone 13 Pro and iPhone SE) and desktop
+- Animated logo
 
 ## Technologies
 
 The core technologies of _Scratch Bonanza_ are JavaScript, CSS and the Canvas API. The following libraries and tools are used:
 
-| Name                  | License | Description                                         |
-| --------------------- | :-----: | --------------------------------------------------- |
-| TypeScript            |   MIT   | A strongly typed language that builds on JavaScript |
-| React                 |   MIT   | Component-based, front-end interface library        |
-| React Router          |   MIT   | Declarative routing for React web applications      |
-| React Scratchcard     |   MIT   | A scratchcard component for React                   |
-| Zustand               |   MIT   | State management                                    |
-| Vite                  |   MIT   | Frontend development tooling                        |
-| Jest                  |   MIT   | JavaScript testing framework                        |
-| React Testing Library |   MIT   | Testing utilitie                                    |
+| Name                            | License | Description                                         |
+| ------------------------------- | :-----: | --------------------------------------------------- |
+| TypeScript                      |   MIT   | A strongly typed language that builds on JavaScript |
+| React                           |   MIT   | Component-based, front-end interface library        |
+| React Router                    |   MIT   | Declarative routing for React web applications      |
+| React Scratchcard               |   MIT   | A scratchcard component for React                   |
+| Zustand                         |   MIT   | State management                                    |
+| Vite                            |   MIT   | Frontend development tooling                        |
+| Jest (Planned)                  |   MIT   | JavaScript testing framework                        |
+| React Testing Library (Planned) |   MIT   | Testing utilitie                                    |
+
+## Roadmap
+
+- Testing
+- Different game modes with different sets of awards
+- Total score
+- Credits
+- Stats
 
 ## Screenshots
 

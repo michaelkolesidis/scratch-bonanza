@@ -11,7 +11,7 @@ type CardRefType = {
 
 export const Play = () => {
   const navigate = useNavigate();
-  const { isLocal, modal, setModal, revealed, resetRevealed } = useGame();
+  const { valuesUrl, modal, setModal, revealed, resetRevealed } = useGame();
   const [scratchCard, setScratchCard] = useState<
     (0 | 1 | 10 | 100 | 1000)[] | undefined
   >();
@@ -24,14 +24,6 @@ export const Play = () => {
   }, []);
 
   const fetchScratchCard = async () => {
-    let valuesUrl: string;
-
-    if (isLocal) {
-      valuesUrl = "http://localhost:4000/values";
-    } else {
-      valuesUrl = "https://scratch-bonanza.onrender.com/values";
-    }
-
     try {
       const requestOptions = {
         method: "GET",

@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { subscribeWithSelector } from "zustand/middleware";
 
 type State = {
-  isLocal: boolean;
+  valuesUrl: string;
   modal: boolean;
   setModal: (isOpen: boolean) => void;
   coins: number;
@@ -15,9 +15,11 @@ type State = {
 const store = create<State>()(
   subscribeWithSelector((set) => ({
     /**
-     *  Is the game running locally?
+     *  Different endpoint for running locally and for deployment
      */
-    isLocal: /(localhost)/.test(window.location.href),
+    valuesUrl: /(localhost)/.test(window.location.href)
+      ? "http://localhost:4000/values"
+      : "https://scratch-bonanza.onrender.com/values",
     /**
      *  Modal
      */

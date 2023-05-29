@@ -6,8 +6,14 @@ import ScratchCard from "react-scratchcard-v2";
 const scratchingSound = new Audio("./sounds/scratching.mp3");
 scratchingSound.loop = true;
 
-// const successSound = new Audio("./sounds/success.mp3");
-// successSound.volume = 0.3;
+const coinSound = new Audio("./sounds/coin.mp3");
+coinSound.volume = 0.3;
+
+const successSound = new Audio("./sounds/success.mp3");
+successSound.volume = 0.3;
+
+const bestSound = new Audio("./sounds/best.mp3");
+bestSound.volume = 0.3;
 
 interface IScratchAreaProps {
   value: 0 | 1 | 10 | 100 | 1000;
@@ -16,13 +22,23 @@ interface IScratchAreaProps {
 const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
   ({ value }: IScratchAreaProps, ref) => {
     const { reveal } = useGame();
-    const [amount] = useState(value);
-    const [amountSrc] = useState(`./assets/${amount}.svg`);
-    const [iconSrc] = useState(
+    const [amount, setAmount] = useState(value);
+    const [amountSrc, setAmountSrc] = useState(`./assets/${amount}.svg`);
+    const [iconSrc, setIconSrc] = useState(
       amount === 0 ? "./assets/banana.svg" : "./assets/coin.svg"
     );
     const [isTouched, setIsTouched] = useState(false);
     const [isScratching, setIsScratching] = useState(false);
+
+    // Update component with new values and images
+    useEffect(() => {
+      setAmount(value);
+    }, [value]);
+
+    useEffect(() => {
+      setAmountSrc(`./assets/${amount}.svg`);
+      setIconSrc(amount === 0 ? "./assets/banana.svg" : "./assets/coin.svg");
+    }, [amount]);
 
     // Event handlers
     const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -116,9 +132,13 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
     // Handle completion of scratching
     const handleComplete = () => {
       reveal();
-      // if (value > 0) {
-      // successSound.play();
-      // }
+      if (value === 1) {
+        coinSound.play();
+      } else if (value === 10) {
+        successSound.play();
+      } else if (value === 100 || value === 1000) {
+        bestSound.play();
+      }
     };
 
     return (
