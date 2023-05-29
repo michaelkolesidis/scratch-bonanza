@@ -133,10 +133,13 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
     const handleComplete = () => {
       reveal();
       if (value === 1) {
+        coinSound.currentTime = 0;
         coinSound.play();
       } else if (value === 10) {
+        successSound.currentTime = 0;
         successSound.play();
       } else if (value === 100 || value === 1000) {
+        bestSound.currentTime = 0;
         bestSound.play();
       }
     };
