@@ -57,6 +57,8 @@ When using the online version, you should note that loading the first scratchcar
 
 ## Screenshots
 
+![Walkthrough](./screenshots/screencast.gif)
+
 ![Home screen](./screenshots/screenshot_001.png)
 
 ![Play screen idle](./screenshots/screenshot_002.png)
@@ -108,7 +110,7 @@ A non-exhaustive list of all the software that was used during the development o
 
 ## License
 
-Copyright (c) 2023 Michael Kolesidis - All Rights Reserved.
+<a href="https://www.gnu.org/licenses/agpl-3.0.html"><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/AGPLv3_Logo.svg" height="100px" /></a>
 
-THE CONTENTS OF THIS PROJECT ARE PROPRIETARY AND CONFIDENTIAL.
-UNAUTHORIZED COPYING, TRANSFERRING OR REPRODUCTION OF THE CONTENTS OF THIS PROJECT, VIA ANY MEDIUM IS STRICTLY PROHIBITED.
+Copyright (c) 2023 Michael Kolesidis<br>
+Licensed under the [GNU Affero General Public License v3.0](https://www.gnu.org/licenses/agpl-3.0.html).

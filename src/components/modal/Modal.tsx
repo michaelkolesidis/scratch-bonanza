@@ -1,3 +1,7 @@
+// Copyright (c) 2023 Michael Kolesidis (michael.kolesidis@gmail.com)
+// Licensed under the GNU Affero General Public License v3.0.
+// https://www.gnu.org/licenses/gpl-3.0.html
+
 import "./style.css";
 import useGame from "../../stores/useGame";
 import { clearLocalStorage } from "../../stores/utils";
@@ -23,7 +27,7 @@ const Modal = () => {
             uncover the rewards.
           </div>
           <div className="modal-text">
-            If you are on your phone, touch the one of the areas and simply move
+            If you are on your phone, touch one of the areas and simply move
             your finger to scratch.
           </div>
           <div className="modal-text">
