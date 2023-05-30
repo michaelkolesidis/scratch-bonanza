@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import useGame from "../../../../stores/useGame";
 import ScratchCard from "react-scratchcard-v2";
 
+/**
+ * Sounds
+ */
 const scratchingSound = new Audio("./sounds/scratching.mp3");
 scratchingSound.volume = 0.3;
 scratchingSound.loop = true;
@@ -11,7 +14,7 @@ const coinSound = new Audio("./sounds/coin.mp3");
 coinSound.volume = 0.3;
 
 const successSound = new Audio("./sounds/success.mp3");
-successSound.volume = 0.3;
+successSound.volume = 0.1;
 
 const bestSound = new Audio("./sounds/best.mp3");
 bestSound.volume = 0.3;
@@ -22,7 +25,7 @@ interface IScratchAreaProps {
 
 const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
   ({ value }: IScratchAreaProps, ref) => {
-    const { reveal } = useGame();
+    const { reveal, addCoins } = useGame();
     const [amount, setAmount] = useState(value);
     const [amountSrc, setAmountSrc] = useState(`./assets/${amount}.svg`);
     const [iconSrc, setIconSrc] = useState(
@@ -31,7 +34,9 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
     const [isTouched, setIsTouched] = useState(false);
     const [isScratching, setIsScratching] = useState(false);
 
-    // Update component with new values and images
+    /**
+     * Update component with new values and images
+     */
     useEffect(() => {
       setAmount(value);
     }, [value]);
@@ -41,7 +46,9 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
       setIconSrc(amount === 0 ? "./assets/banana.svg" : "./assets/coin.svg");
     }, [amount]);
 
-    // Event handlers
+    /**
+     * Event handling
+     */
     const handleMouseDown = (event: React.MouseEvent<HTMLDivElement>) => {
       if (event.button === 0) {
         setIsTouched(true);
@@ -115,7 +122,9 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
       }
     }, [isScratching]);
 
-    // Attach event handlers according to device support for touch events
+    /**
+     * Attach event handlers according to device support for touch events
+     */
     const supportsTouchEvents = "ontouchstart" in window;
     const eventHandlers = supportsTouchEvents
       ? {
@@ -129,9 +138,16 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
           onMouseUp: handleMouseUp,
         };
 
-    // Handle completion of scratching
+    /**
+     * Handle completion of scratching
+     */
     const handleComplete = () => {
       reveal();
+      if (value !== 0) {
+        addCoins(value);
+        console.log("MUST ADD COINS");
+      }
+
       if (value === 1) {
         coinSound.currentTime = 0;
         coinSound.play();

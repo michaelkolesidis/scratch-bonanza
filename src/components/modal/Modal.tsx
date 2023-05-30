@@ -1,8 +1,17 @@
 import "./style.css";
 import useGame from "../../stores/useGame";
+import { clearLocalStorage } from "../../stores/utils";
 
-export const Modal = () => {
+const Modal = () => {
+  const { resetCards, resetCoins } = useGame();
+
   const { setModal } = useGame();
+
+  const handleClear = () => {
+    clearLocalStorage();
+    resetCards();
+    resetCoins();
+  };
 
   return (
     <div className="modal" onClick={() => setModal(false)}>
@@ -22,8 +31,13 @@ export const Modal = () => {
             mouse around.
           </div>
           <div className="modal-text">Scratch your way to great prizes!</div>
+          <div className="modal-button" onClick={handleClear}>
+            Clear Data
+          </div>
         </div>
       </div>
     </div>
   );
 };
+
+export default Modal;

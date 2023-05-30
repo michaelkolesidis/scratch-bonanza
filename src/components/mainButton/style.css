@@ -1,0 +1,60 @@
+.button-main {
+  width: min(220px, 45vw);
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.13)),
+    radial-gradient(
+      90% 7% at 50% 8%,
+      rgba(255, 255, 255, 0.47) 25%,
+      rgba(255, 255, 255, 0) 50%
+    ),
+    #debb50;
+  border: 0;
+  border-radius: 0.375em;
+  box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.47),
+    0 -0.1em 0 0.1em rgba(0, 0, 0, 0.27),
+    0 0.1em 0 0.1em rgba(255, 255, 255, 0.27), -0.2em 0 0.2em #d3a928 inset,
+    0 0.2em 0.2em rgba(255, 255, 255, 0.27) inset,
+    0.2em 0 0.2em rgba(255, 255, 255, 0.27) inset, 0 -0.2em 0.2em #d3a928 inset;
+  cursor: pointer;
+  margin: 1em auto 0 auto;
+  padding: 0.5em 1em;
+  font-size: min(7vw, 40px);
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 0 0.3em rgb(0, 0, 0);
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.button-main,
+.button-main span {
+  display: block;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+}
+
+.button-main:focus,
+.button-main span:focus {
+  outline: none;
+}
+
+.button-main span {
+  transition-property: transform;
+  will-change: transform;
+}
+
+.button-main:active {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.47), 0 -0.1em 0 0.1em rgba(0, 0, 0, 0.27),
+    0 0.1em 0 0.1em rgba(255, 255, 255, 0.27), -0.2em 0 0.2em #deb53b inset,
+    0 0.2em 0.2em rgba(0, 0, 0, 0.27) inset,
+    0.2em 0 0.2em rgba(0, 0, 0, 0.27) inset, 0 -0.2em 0.2em #e1b739 inset;
+}
+
+.button-main:active span {
+  transform: scale(0.95);
+}
+
+.button-main:focus {
+  color: #decc97;
+  text-shadow: 0 0 0.2em rgba(126, 126, 126, 0.47);
+}

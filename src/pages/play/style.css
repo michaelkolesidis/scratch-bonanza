@@ -31,12 +31,37 @@
   }
 }
 
-.card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.logo-small {
+  position: fixed;
+  top: -1.25px;
+  left: -2.5px;
+  width: 125px;
+  pointer-events: none;
 }
 
 .disabled-button {
   pointer-events: none;
   opacity: 0.5;
+}
+
+.stats {
+  position: fixed;
+  bottom: 0;
+  color: #fff;
+  background: rgb(0 0 0 / 0.4);
+  width: 100%;
+  text-align: center;
+  font-size: 2.5vh;
+  height: 4vh;
+  line-height: 4vh;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stats-coin {
+  height: 1.5vh;
+}
+
+.stats > div {
+  min-width: 120px;
 }

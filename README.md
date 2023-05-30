@@ -4,15 +4,17 @@ An online scratchcard game. Do you feel lucky?
 
 ## Instructions
 
-In order to run the project locally you need to start both the client (this repository) and the server, that can be found in its own repository, [Scratch Bonanza Server](https://github.com/michaelkolesidis/scratch-bonanza-server)
+In order to run the project locally you need to start both the client (this repository) and the server, that can be found in its own repository, [Scratch Bonanza Server](https://github.com/michaelkolesidis/scratch-bonanza-server).
 
-Install the project dependencies:
+**1.** Start the server.
+
+**2.** Install the project dependencies:
 
 ```
 yarn
 ```
 
-Start Vite:
+**3.** Start Vite:
 
 ```
 yarn dev
@@ -22,19 +24,44 @@ yarn dev
 
 There is also an online deployment of _Scratch Bonanza_ that can be found in [here](https://scratch-bonanza.vercel.app/). The online version is deployed in [Vercel](https://vercel.com/) and is configured to use an online deployment of the server, deployed in [Render](https://render.com/).
 
-When using the online version, you should note that loading the first scratchcard will usually take around 15-20 seconds, as the project is hosted using the free tier of Render, thus the server sleeps when inactive.
+When using the online version, you should note that loading the first scratchcard will usually take around 30-50 seconds, as the project is hosted using the free tier of Render, thus the server sleeps when inactive. On rare occasions, the server might take up to 5 minutes to respond to the first call.
 
 ## Features
 
+### Architecture
+
+- Three game phases: ready, playing, ended
+- Total number of coins won saved both in state and in local storage
+- Number of scratchcards used saved both in state and in local storage
+- Clear data functionality
+
+### Gameplay
+
 - Each scratchcard features four scratchable areas that have a reward hidden underneath
 - Five different reward options: **1**🪙, **10**🪙, **100**🪙, **1000**🪙 or **0**🍌
-- Scratching sound while scratching implemented both on touch and on non-touch devices
-- Three different success sounds when revealing an award (a sound for 1 coin, another sound for 10 coins, and another sound for 100 and 1000 coins)
+
+### UI/UX
+
 - New game and restart functionality
+- Stats bar at the bottom disaplying total coins won and total scratchcards used
 - New button is active only when all four areas have been scratched
 - Help modal available in all screens
 - Responsive for mobile (iPhone 13 Pro and iPhone SE) and desktop
 - Animated logo
+
+### Sound
+
+- Scratching sound while scratching implemented both on touch and on non-touch devices
+- Three different success sounds when revealing an award (a sound for 1 coin, another sound for 10 coins, and another sound for 100 and 1000 coins)
+- Sound when a new card loads
+
+## Screenshots
+
+![Home screen](./screenshots/screenshot_01.png)
+
+![Play screen](./screenshots/screenshot_02.png)
+
+![Help](./screenshots/screenshot_03.png)
 
 ## Technologies
 
@@ -49,17 +76,14 @@ The core technologies of _Scratch Bonanza_ are JavaScript, CSS and the Canvas AP
 | Zustand                         |   MIT   | State management                                    |
 | Vite                            |   MIT   | Frontend development tooling                        |
 | Jest (Planned)                  |   MIT   | JavaScript testing framework                        |
-| React Testing Library (Planned) |   MIT   | Testing utilitie                                    |
+| React Testing Library (Planned) |   MIT   | Testing utility                                     |
 
 ## Roadmap
 
 - Testing
 - Different game modes with different sets of awards
-- Total score
 - Credits
-- Stats
-
-## Screenshots
+- Translations
 
 ## Gameplay and Rules
 

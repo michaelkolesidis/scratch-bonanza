@@ -7,7 +7,7 @@
 }
 
 .home-page-logo {
-  height: 65vh;
+  height: 60.75vh;
   width: min(500px, 100vw);
   background-image: url("/assets/logo.png");
   background-repeat: no-repeat;
@@ -36,4 +36,12 @@
   100% {
     transform: scale(1, 1) rotateZ(0deg);
   }
+}
+
+.copyright {
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  margin: 1vh 0;
+  font-size: min(5vw, 20px);
 }
