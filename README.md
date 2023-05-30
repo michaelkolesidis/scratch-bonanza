@@ -57,11 +57,13 @@ When using the online version, you should note that loading the first scratchcar
 
 ## Screenshots
 
-![Home screen](./screenshots/screenshot_01.png)
+![Home screen](./screenshots/screenshot_001.png)
 
-![Play screen](./screenshots/screenshot_02.png)
+![Play screen idle](./screenshots/screenshot_002.png)
 
-![Help](./screenshots/screenshot_03.png)
+![Play screen scratched](./screenshots/screenshot_003.png)
+
+![Help](./screenshots/screenshot_004.png)
 
 ## Technologies
 

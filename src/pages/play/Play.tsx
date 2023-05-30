@@ -113,7 +113,11 @@ export const Play = () => {
         <div className="loading">LOADING...</div>
       ) : (
         <>
-          <img src="./assets/logo.png" className="logo-small" />
+          <img
+            src="./assets/logo.png"
+            className="logo-small"
+            onClick={handleBack}
+          />
           <Card key={key} ref={cardRef} card={scratchCard} />
 
           <MainButton
@@ -121,7 +125,7 @@ export const Play = () => {
             text="NEW"
             disabled={revealed !== 4}
           />
-          <MainButton handleClick={handleBack} text="BACK" />
+          {/* <MainButton handleClick={handleBack} text="BACK" /> */}
 
           <HelpButton />
           {modal && <Modal />}

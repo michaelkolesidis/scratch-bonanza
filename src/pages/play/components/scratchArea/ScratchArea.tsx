@@ -10,11 +10,11 @@ const scratchingSound = new Audio("./sounds/scratching.mp3");
 scratchingSound.volume = 0.3;
 scratchingSound.loop = true;
 
-const coinSound = new Audio("./sounds/coin.mp3");
-coinSound.volume = 0.3;
-
 const successSound = new Audio("./sounds/success.mp3");
 successSound.volume = 0.1;
+
+const coinSound = new Audio("./sounds/coin.mp3");
+coinSound.volume = 0.3;
 
 const bestSound = new Audio("./sounds/best.mp3");
 bestSound.volume = 0.3;
@@ -149,11 +149,11 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
       }
 
       if (value === 1) {
-        coinSound.currentTime = 0;
-        coinSound.play();
-      } else if (value === 10) {
         successSound.currentTime = 0;
         successSound.play();
+      } else if (value === 10) {
+        coinSound.currentTime = 0;
+        coinSound.play();
       } else if (value === 100 || value === 1000) {
         bestSound.currentTime = 0;
         bestSound.play();
@@ -167,7 +167,7 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
           width={170}
           height={170}
           image="./assets/scratch_card.png"
-          finishPercent={60}
+          finishPercent={50}
           onComplete={handleComplete}
           brushSize={15}
           fadeOutOnComplete={false}
