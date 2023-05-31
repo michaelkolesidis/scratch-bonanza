@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Michael Kolesidis (michael.kolesidis@gmail.com)
+// Copyright (c) 2023 Michael Kolesidis <michael.kolesidis@gmail.com>
 // Licensed under the GNU Affero General Public License v3.0.
 // https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -129,7 +129,6 @@ export const Play = () => {
             text="NEW"
             disabled={revealed !== 4}
           />
-          {/* <MainButton handleClick={handleBack} text="BACK" /> */}
 
           <HelpButton />
           {modal && <Modal />}
@@ -137,7 +136,7 @@ export const Play = () => {
           <div className="stats">
             <div>CARDS : {cards}</div>
             <div>
-              {coins} <img className="stats-coin" src="./assets/coin.svg" />
+              {coins} <img className="stats-coin" src="./assets/coin.png" />
             </div>
           </div>
         </>

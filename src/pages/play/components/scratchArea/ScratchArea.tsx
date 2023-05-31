@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Michael Kolesidis (michael.kolesidis@gmail.com)
+// Copyright (c) 2023 Michael Kolesidis <michael.kolesidis@gmail.com>
 // Licensed under the GNU Affero General Public License v3.0.
 // https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -33,7 +33,7 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
     const [amount, setAmount] = useState(value);
     const [amountSrc, setAmountSrc] = useState(`./assets/${amount}.svg`);
     const [iconSrc, setIconSrc] = useState(
-      amount === 0 ? "./assets/banana.svg" : "./assets/coin.svg"
+      amount === 0 ? "./assets/banana.png" : "./assets/coin.png"
     );
     const [isTouched, setIsTouched] = useState(false);
     const [isScratching, setIsScratching] = useState(false);
@@ -47,7 +47,7 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
 
     useEffect(() => {
       setAmountSrc(`./assets/${amount}.svg`);
-      setIconSrc(amount === 0 ? "./assets/banana.svg" : "./assets/coin.svg");
+      setIconSrc(amount === 0 ? "./assets/banana.png" : "./assets/coin.png");
     }, [amount]);
 
     /**

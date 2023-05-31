@@ -1,8 +1,9 @@
 {
   "name": "scratch-bonanza",
-  "version": "0.0.1",
-  "author": "Michael Kolesidis",
-  "description": "An online scratchcard game. Do you feel lucky?",
+  "version": "1.0.0",
+  "author": "Michael Kolesidis <michael.kolesidis@gmail.com> (https://michaelkolesidis.com/)",
+  "license": "AGPL-3.0-or-later",
+  "description": "An online scratchcard game.",
   "keywords": [
     "react",
     "animation",
@@ -25,8 +26,8 @@
     "scratch-it",
     "instant-lottery"
   ],
-  "license": "UNLICENSED",
-  "private": true,
+  "repository": "https://github.com/michaelkolesidis/scratch-bonanza.git",
+  "homepage": "https://github.com/michaelkolesidis/scratch-bonanza/",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
@@ -48,8 +49,8 @@
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
     "@vitejs/plugin-react": "^4.0.0",
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",

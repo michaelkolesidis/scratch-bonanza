@@ -59,7 +59,8 @@
 }
 
 .stats-coin {
-  height: 1.5vh;
+  height: 1.8vh;
+  margin-left: 0.5vw;
 }
 
 .stats > div {

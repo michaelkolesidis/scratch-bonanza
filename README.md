@@ -1,6 +1,8 @@
 ![Scratch Bonanza Logo](./public/assets/logo.png)
 
-An online scratchcard game. Do you feel lucky?
+**An online scratchcard game. Do you feel lucky?**
+
+There are five different rewards with different sounds, 1🪙, 10🪙, 100🪙, 1000🪙 or 0🍌. It is a full-stack implementation, with the rewards generated on the server.
 
 ## Instructions
 
@@ -57,15 +59,15 @@ When using the online version, you should note that loading the first scratchcar
 
 ## Screenshots
 
-![Walkthrough](./screenshots/screencast.gif)
+![Demo](./videos/demo.gif)
 
-![Home screen](./screenshots/screenshot_001.png)
+![Home screen](./screenshots/screenshot_0001.png)
 
-![Play screen idle](./screenshots/screenshot_002.png)
+![Play screen idle](./screenshots/screenshot_0002.png)
 
-![Play screen scratched](./screenshots/screenshot_003.png)
+![Play screen scratched](./screenshots/screenshot_0003.png)
 
-![Help](./screenshots/screenshot_004.png)
+![Help](./screenshots/screenshot_0004.png)
 
 ## Technologies
 
