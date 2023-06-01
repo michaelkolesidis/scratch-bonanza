@@ -54,7 +54,7 @@ When using the online version, you should note that loading the first scratchcar
 ### Sound
 
 - Scratching sound while scratching implemented both on touch and on non-touch devices
-- Three different success sounds when revealing an award (a sound for 1 coin, another sound for 10 coins, and another sound for 100 and 1000 coins)
+- Four different sounds when revealing an award (a sound for 0 bananas, a sound for 1 coin, another sound for 10 coins, and another sound for 100 and 1000 coins)
 - Sound when a new card loads
 
 ## Screenshots
