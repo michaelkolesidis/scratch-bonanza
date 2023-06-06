@@ -81,7 +81,7 @@ The core technologies of _Scratch Bonanza_ are JavaScript, CSS and the Canvas AP
 | React Scratchcard               |   MIT   | A scratchcard component for React                   |
 | Zustand                         |   MIT   | State management                                    |
 | Vite                            |   MIT   | Frontend development tooling                        |
-| Jest (Planned)                  |   MIT   | JavaScript testing framework                        |
+| Vitest (Planned)                |   MIT   | Unit test framework powered by Vite                 |
 | React Testing Library (Planned) |   MIT   | Testing utility                                     |
 
 ## Roadmap
