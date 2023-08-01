@@ -45,7 +45,7 @@ When using the online version, you should note that loading the first scratchcar
 ### UI/UX
 
 - New game and restart functionality
-- Stats bar at the bottom disaplying total coins won and total scratchcards used
+- Stats bar at the bottom displaying total coins won and total scratchcards used
 - New button is active only when all four areas have been scratched
 - Help modal available in all screens
 - Responsive for mobile (iPhone 13 Pro and iPhone SE) and desktop
