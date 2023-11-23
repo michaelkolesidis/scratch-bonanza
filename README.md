@@ -2,6 +2,8 @@
 
 **An online scratchcard game. Do you feel lucky?**
 
+<a href='https://ko-fi.com/michaelkolesidis' target='_blank'><img src='https://cdn.ko-fi.com/cdn/kofi1.png' style='border:0px;height:45px;' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 There are five different rewards with different sounds, 1🪙, 10🪙, 100🪙, 1000🪙 or 0🍌. It is a full-stack implementation, with the rewards generated on the server.
 
 ## Instructions
@@ -91,8 +93,6 @@ The core technologies of _Scratch Bonanza_ are JavaScript, CSS and the Canvas AP
 - Credits
 - Translations
 
-## Gameplay and Rules
-
 ## Software Used
 
 A non-exhaustive list of all the software that was used during the development of _Scratch Bonanza_.
@@ -104,7 +104,11 @@ A non-exhaustive list of all the software that was used during the development o
 - Microsoft Edge
 - Mozilla Firefox
 
-## Assets
+## 💖 Support the Project
+
+Thank you so much for your interest in my project! If you want to go a step further and support my open source work, buy me a coffee:
+
+<a href='https://ko-fi.com/michaelkolesidis' target='_blank'><img src='https://cdn.ko-fi.com/cdn/kofi1.png' style='border:0px;height:45px;' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 ## See Also
 
