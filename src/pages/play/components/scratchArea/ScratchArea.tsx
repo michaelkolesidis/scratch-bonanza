@@ -1,29 +1,25 @@
-// Copyright (c) 2023 Michael Kolesidis <michael.kolesidis@gmail.com>
-// Licensed under the GNU Affero General Public License v3.0.
-// https://www.gnu.org/licenses/gpl-3.0.html
-
-import "./style.css";
-import React, { useEffect, useState } from "react";
-import useGame from "../../../../stores/useGame";
-import ScratchCard from "react-scratchcard-v2";
+import './style.css';
+import React, { useEffect, useState } from 'react';
+import useGame from '../../../../stores/useGame';
+import ScratchCard from 'react-scratchcard-v2';
 
 /**
  * Sounds
  */
-const scratchingSound = new Audio("./sounds/scratching.mp3");
+const scratchingSound = new Audio('./sounds/scratching.mp3');
 scratchingSound.volume = 0.3;
 scratchingSound.loop = true;
 
-const successSound = new Audio("./sounds/success.mp3");
+const successSound = new Audio('./sounds/success.mp3');
 successSound.volume = 0.1;
 
-const coinSound = new Audio("./sounds/coin.mp3");
+const coinSound = new Audio('./sounds/coin.mp3');
 coinSound.volume = 0.3;
 
-const bestSound = new Audio("./sounds/best.mp3");
+const bestSound = new Audio('./sounds/best.mp3');
 bestSound.volume = 0.3;
 
-const bananaSound = new Audio("./sounds/banana.mp3");
+const bananaSound = new Audio('./sounds/banana.mp3');
 bananaSound.volume = 0.3;
 
 interface IScratchAreaProps {
@@ -36,7 +32,7 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
     const [amount, setAmount] = useState(value);
     const [amountSrc, setAmountSrc] = useState(`./assets/${amount}.svg`);
     const [iconSrc, setIconSrc] = useState(
-      amount === 0 ? "./assets/banana.png" : "./assets/coin.png"
+      amount === 0 ? './assets/banana.png' : './assets/coin.png'
     );
     const [isTouched, setIsTouched] = useState(false);
     const [isScratching, setIsScratching] = useState(false);
@@ -50,7 +46,7 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
 
     useEffect(() => {
       setAmountSrc(`./assets/${amount}.svg`);
-      setIconSrc(amount === 0 ? "./assets/banana.png" : "./assets/coin.png");
+      setIconSrc(amount === 0 ? './assets/banana.png' : './assets/coin.png');
     }, [amount]);
 
     /**
@@ -88,10 +84,10 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
         }
       };
 
-      window.addEventListener("mouseup", handleWindowMouseUp);
+      window.addEventListener('mouseup', handleWindowMouseUp);
 
       return () => {
-        window.removeEventListener("mouseup", handleWindowMouseUp);
+        window.removeEventListener('mouseup', handleWindowMouseUp);
       };
     }, [isTouched]);
 
@@ -113,10 +109,10 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
         }
       };
 
-      window.addEventListener("touchend", handleWindowTouchEnd);
+      window.addEventListener('touchend', handleWindowTouchEnd);
 
       return () => {
-        window.removeEventListener("touchend", handleWindowTouchEnd);
+        window.removeEventListener('touchend', handleWindowTouchEnd);
       };
     }, [isTouched]);
 
@@ -132,7 +128,7 @@ const ScratchArea = React.forwardRef<ScratchCard, IScratchAreaProps>(
     /**
      * Attach event handlers according to device support for touch events
      */
-    const supportsTouchEvents = "ontouchstart" in window;
+    const supportsTouchEvents = 'ontouchstart' in window;
     const eventHandlers = supportsTouchEvents
       ? {
           onTouchStart: handleTouchStart,

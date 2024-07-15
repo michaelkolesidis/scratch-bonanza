@@ -1,21 +1,17 @@
-// Copyright (c) 2023 Michael Kolesidis <michael.kolesidis@gmail.com>
-// Licensed under the GNU Affero General Public License v3.0.
-// https://www.gnu.org/licenses/gpl-3.0.html
-
-import "./style.css";
-import { useEffect, useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import useGame from "../../stores/useGame";
-import { getLocalStorage, setLocalStorage } from "../../stores/utils";
-import Card from "./components/scratchCard/ScratchCard";
-import Modal from "../../components/modal/Modal";
-import MainButton from "../../components/mainButton/MainButton";
-import HelpButton from "../../components/helpButton/HelpButton";
+import './style.css';
+import { useEffect, useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import useGame from '../../stores/useGame';
+import { getLocalStorage, setLocalStorage } from '../../stores/utils';
+import Card from './components/scratchCard/ScratchCard';
+import Modal from '../../components/modal/Modal';
+import MainButton from '../../components/mainButton/MainButton';
+import HelpButton from '../../components/helpButton/HelpButton';
 
 /**
  * Sound
  */
-const magicSound = new Audio("./sounds/magic.mp3");
+const magicSound = new Audio('./sounds/magic.mp3');
 magicSound.volume = 0.2;
 
 type CardRefType = {
@@ -54,18 +50,18 @@ export const Play = () => {
   const fetchScratchCard = async () => {
     try {
       const requestOptions = {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
       };
       const response = await fetch(valuesUrl, requestOptions);
       if (response.ok) {
         const data = await response.json();
         setScratchCard(data);
       } else {
-        console.error("Failed to fetch scratch card: ", response.status);
+        console.error('Failed to fetch scratch card: ', response.status);
       }
     } catch (error) {
-      console.error("Error while fetching scratch card: ", error);
+      console.error('Error while fetching scratch card: ', error);
     }
   };
 
@@ -80,15 +76,15 @@ export const Play = () => {
    */
   useEffect(() => {
     // Coins
-    const storedCoins = getLocalStorage("coins");
+    const storedCoins = getLocalStorage('coins');
     if (storedCoins === null) {
-      setLocalStorage("coins", "0");
+      setLocalStorage('coins', '0');
     }
 
     // Cards
-    const storedCards = getLocalStorage("cards");
+    const storedCards = getLocalStorage('cards');
     if (storedCards === null) {
-      setLocalStorage("cards", "0");
+      setLocalStorage('cards', '0');
     }
     addCard();
   }, []);
@@ -108,7 +104,7 @@ export const Play = () => {
   };
 
   const handleBack = () => {
-    navigate("/");
+    navigate('/');
   };
 
   return (

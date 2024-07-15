@@ -1,10 +1,6 @@
-// Copyright (c) 2023 Michael Kolesidis <michael.kolesidis@gmail.com>
-// Licensed under the GNU Affero General Public License v3.0.
-// https://www.gnu.org/licenses/gpl-3.0.html
-
-import { create } from "zustand";
-import { subscribeWithSelector } from "zustand/middleware";
-import { getLocalStorage, setLocalStorage } from "./utils";
+import { create } from 'zustand';
+import { subscribeWithSelector } from 'zustand/middleware';
+import { getLocalStorage, setLocalStorage } from './utils';
 
 type State = {
   // Endpoint
@@ -43,8 +39,8 @@ const store = create<State>()(
      *  (different endpoints for running locally and for deployment)
      */
     valuesUrl: /(localhost)/.test(window.location.href)
-      ? "http://localhost:4000/values"
-      : "https://scratch-bonanza.onrender.com/values",
+      ? 'http://localhost:4000/values'
+      : 'https://scratch-bonanza.onrender.com/values',
 
     /**
      *  Modal
@@ -63,16 +59,16 @@ const store = create<State>()(
      *  Total Cards
      *  (how many cards has the player used)
      */
-    cards: Number(getLocalStorage("cards")) || 0,
+    cards: Number(getLocalStorage('cards')) || 0,
     addCard: () => {
-      setLocalStorage("cards", Number(getLocalStorage("cards")) + 1);
+      setLocalStorage('cards', Number(getLocalStorage('cards')) + 1);
       set((state) => ({ cards: state.cards + 1 }));
     },
     resetCards: () => {
       set((state) => {
-        if (state.phase === "ready" || state.phase === "ended") {
+        if (state.phase === 'ready' || state.phase === 'ended') {
           return { cards: 0 };
-        } else if (state.phase === "playing") {
+        } else if (state.phase === 'playing') {
           return { cards: 1 };
         }
         return {};
@@ -83,9 +79,9 @@ const store = create<State>()(
      *  Coins
      *  (total amount of winnings for the player)
      */
-    coins: Number(getLocalStorage("coins")) || 0,
+    coins: Number(getLocalStorage('coins')) || 0,
     addCoins: (value: number) => {
-      setLocalStorage("coins", Number(getLocalStorage("coins")) + value);
+      setLocalStorage('coins', Number(getLocalStorage('coins')) + value);
       set((state) => ({ coins: state.coins + value }));
     },
     resetCoins: () => {
@@ -114,7 +110,7 @@ const store = create<State>()(
      * Phases
      * (the phase of the game)
      */
-    phase: "ready", // "playing", "ended"
+    phase: 'ready', // "playing", "ended"
 
     setPhase: (gamePhase: string) => {
       set(() => {
@@ -126,9 +122,9 @@ const store = create<State>()(
 
     start: () => {
       set((state) => {
-        if (state.phase === "ready" || state.phase === "ended") {
+        if (state.phase === 'ready' || state.phase === 'ended') {
           return {
-            phase: "playing",
+            phase: 'playing',
           };
         }
         return {};
@@ -137,9 +133,9 @@ const store = create<State>()(
 
     end: () => {
       set((state) => {
-        if (state.phase === "playing") {
+        if (state.phase === 'playing') {
           return {
-            phase: "ended",
+            phase: 'ended',
           };
         }
         return {};

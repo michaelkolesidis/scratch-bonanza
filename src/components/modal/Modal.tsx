@@ -1,10 +1,6 @@
-// Copyright (c) 2023 Michael Kolesidis <michael.kolesidis@gmail.com>
-// Licensed under the GNU Affero General Public License v3.0.
-// https://www.gnu.org/licenses/gpl-3.0.html
-
-import "./style.css";
-import useGame from "../../stores/useGame";
-import { clearLocalStorage } from "../../stores/utils";
+import './style.css';
+import useGame from '../../stores/useGame';
+import { clearLocalStorage } from '../../stores/utils';
 
 const Modal = () => {
   const { resetCards, resetCoins } = useGame();
