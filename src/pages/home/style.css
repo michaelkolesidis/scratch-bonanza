@@ -9,7 +9,7 @@
 .home-page-logo {
   height: 60.75vh;
   width: min(500px, 100vw);
-  background-image: url("/assets/logo.png");
+  background-image: url('/assets/logo.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -44,4 +44,15 @@
   bottom: 0;
   margin: 1vh 0;
   font-size: min(5vw, 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
 }

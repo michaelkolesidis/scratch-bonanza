@@ -24,7 +24,22 @@ export const Home = () => {
       <div className="home-page-logo" />
       <MainButton handleClick={handlePlay} text="PLAY" />
       <HelpButton />
-      <div className="copyright">© 2023 Michael Kolesidis</div>
+      <div className="copyright">
+        <a
+          href="http://michaelkolesidis.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          © Michael Kolesidis
+        </a>
+        <a
+          href="https://github.com/michaelkolesidis/scratch-bonanza"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+      </div>
       {modal && <Modal />}
     </div>
   );
