@@ -45,6 +45,7 @@
   margin: auto;
   padding: min(4vw, 20px);
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .modal-button:active {

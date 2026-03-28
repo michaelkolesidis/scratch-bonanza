@@ -14,7 +14,7 @@
   background-position: center;
   background-size: contain;
   pointer-events: none;
-  animation: wiggle 4s infinite;
+  animation: wiggle 2s infinite;
 }
 
 @keyframes wiggle {

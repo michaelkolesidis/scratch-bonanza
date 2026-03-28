@@ -1,0 +1,1 @@
+yarn add react react-dom react-router-dom react-scratchcard-v2 zustand && yarn add -D @types/react @types/react-dom @typescript-eslint/eslint-plugin @typescript-eslint/parser @vitejs/plugin-react eslint eslint-plugin-react-hooks eslint-plugin-react-refresh jsdom typescript vite
